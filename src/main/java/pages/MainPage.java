@@ -15,10 +15,6 @@ public class MainPage extends BasePage{
     @FindBy(xpath = "//h1[normalize-space()='Kampanyalar']")
     private WebElement campaignText;
 
-    public MainPage(WebDriver driver) {
-        super(driver);
-    }
-
     public void acceptCookies(){
         acceptCookies.click();
     }

@@ -4,7 +4,7 @@ import pages.MainPage;
 import io.cucumber.java.en.And;
 
 public class MainPageSteps {
-    private MainPage m_mainPage;
+    private static final MainPage m_mainPage = new MainPage();
     private static final String PRODUCT_SEARCH_NAME = "Iphone";
 
     @And("click to accept cookies")

@@ -7,11 +7,11 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 public class CampaignPageSteps {
-    private static MainPage m_mainPage;
+    private static final MainPage m_mainPage = new MainPage();
     private static final String CAMPAIGN_TEXT = "Kampanyalar";
 
-    @When("click to campaign button{}")
-    public void clickToCampaignButton(WebDriver driver) {
+    @When("click to campaign button")
+    public void clickToCampaignButton() {
         m_mainPage.clickCampaignLocator();
     }
     @Then("verify campaign page")

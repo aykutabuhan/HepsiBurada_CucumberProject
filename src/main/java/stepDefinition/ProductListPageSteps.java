@@ -4,7 +4,7 @@ import pages.ProductListPage;
 import io.cucumber.java.en.And;
 
 public class ProductListPageSteps {
-    private static ProductListPage m_productListPage;
+    private static final ProductListPage m_productListPage = new ProductListPage();
 
     @And("click to first product")
     public void clickToFirstProduct() {

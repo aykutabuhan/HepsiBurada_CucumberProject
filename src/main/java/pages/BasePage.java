@@ -1,5 +1,6 @@
 package pages;
 
+import drivers.Driver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
@@ -15,8 +16,8 @@ public class BasePage {
     protected Actions m_actions;
     private static final int DEFAULT_TIMEOUT_DURATION = 10;
 
-    public BasePage(WebDriver driver){
-        m_driver = driver;
+    public BasePage(){
+        m_driver = Driver.getDriver();
         m_WaitPage = new WebDriverWait(m_driver, Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
         PageFactory.initElements(m_driver, this);
         m_actions = new Actions(m_driver);

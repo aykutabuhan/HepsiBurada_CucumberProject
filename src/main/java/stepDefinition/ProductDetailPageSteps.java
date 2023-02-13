@@ -9,8 +9,8 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 public class ProductDetailPageSteps {
-    private static ProductInformationPage m_productInformationPage;
-    private static CartPage m_cartPage;
+    private static final ProductInformationPage m_productInformationPage = new ProductInformationPage();
+    private static final CartPage m_cartPage = new CartPage();
     private static final int PRODUCT_COMMENTS_LIKE_INDEX = 0;
 
 

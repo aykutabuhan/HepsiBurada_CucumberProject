@@ -3,9 +3,7 @@ package runner;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
 
 @RunWith(Cucumber.class)
 
@@ -15,10 +13,4 @@ import org.openqa.selenium.WebDriver;
         glue = {"stepDefinition"}
 )
 
-public class TestRunner extends AbstractTestNGCucumberTests {
-
-    @BeforeClass
-    public void before(WebDriver driver){
-
-    }
-}
+public class TestRunner extends AbstractTestNGCucumberTests {}
