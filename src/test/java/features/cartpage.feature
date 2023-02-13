@@ -1,5 +1,6 @@
 Feature: CartPage Steps
 
   Scenario: Go to payment
-    Given navigate to cart page "https://checkout.hepsiburada.com/sepetim"
-    And click to complete the shopping button
+    Given navigate to website "https://checkout.hepsiburada.com/sepetim"
+    And click to my account
+    And click to login
