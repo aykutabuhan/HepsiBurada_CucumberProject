@@ -16,8 +16,8 @@ public class BasePage {
     protected Actions m_actions;
     private static final int DEFAULT_TIMEOUT_DURATION = 10;
 
-    public BasePage(){
-        m_driver = Driver.getDriver();
+    public BasePage(final WebDriver driver){
+        m_driver = driver;
         m_WaitPage = new WebDriverWait(m_driver, Duration.ofSeconds(DEFAULT_TIMEOUT_DURATION));
         PageFactory.initElements(m_driver, this);
         m_actions = new Actions(m_driver);

@@ -1,5 +1,6 @@
 package pages;
 
+import drivers.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,6 +13,10 @@ public class CartPage extends BasePage{
     private WebElement myAccountLocator;
     @FindBy(xpath = "//a[contains(text(),'Giriş yap')]")
     private WebElement enterMyAccountLocator;
+
+    public CartPage(final WebDriver driver) {
+        super(driver);
+    }
 
     public boolean isOnBasketPage(){
         waitUntil(ExpectedConditions.visibilityOf(myBasketLocator), 5);

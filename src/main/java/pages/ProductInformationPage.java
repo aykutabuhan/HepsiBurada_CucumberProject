@@ -22,6 +22,10 @@ public class ProductInformationPage extends BasePage{
     @FindBy(css = "a[class*='sf-OldMyAccount'] span[id=cartItemCount]")
     private WebElement cartCounter;
 
+    public ProductInformationPage(final WebDriver driver) {
+        super(driver);
+    }
+
     public void clickComments(){
         clickElement(commentsLocator);
     }
