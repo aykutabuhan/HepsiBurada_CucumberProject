@@ -1,9 +1,7 @@
 package drivers;
 
-import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Driver {
     private static final ThreadLocal<WebDriver> ms_driver = new ThreadLocal<>();
@@ -12,7 +10,7 @@ public class Driver {
     public static WebDriver getDriver(){
         return  ms_driver.get();
     }
-    public static void setDriver(final WebDriver driver ) {
+    public static void setDriver(final RemoteWebDriver driver ) {
         ms_driver.set(driver);
     }
 }
