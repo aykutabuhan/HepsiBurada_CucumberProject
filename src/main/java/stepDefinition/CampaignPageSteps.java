@@ -1,13 +1,13 @@
 package stepDefinition;
 
-import org.openqa.selenium.WebDriver;
+import drivers.Driver;
 import pages.MainPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-public class CampaignPageSteps {
-    private static final MainPage m_mainPage = new MainPage();
+public class CampaignPageSteps extends Driver {
+    private final MainPage m_mainPage = new MainPage(getDriver());
     private static final String CAMPAIGN_TEXT = "Kampanyalar";
 
     @When("click to campaign button")

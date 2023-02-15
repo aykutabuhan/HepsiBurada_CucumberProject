@@ -1,29 +1,17 @@
 package drivers;
 
+import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
-    private static WebDriver ms_driver;
-    public static WebDriver initializationDriver(String browserName){
+    private static final ThreadLocal<WebDriver> ms_driver = new ThreadLocal<>();
 
-        if (browserName.equalsIgnoreCase("Chrome")){
-            System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-            ms_driver = new ChromeDriver();
-        }
-        else if (browserName.equalsIgnoreCase("Safafi")) {
-            ms_driver = new SafariDriver();
-        }
-        else
-            return null;
-
-        return getDriver();
+    public static WebDriver getDriver(){
+        return  ms_driver.get();
     }
     public static void setDriver(WebDriver driver){
-         ms_driver = driver;
-    }
-    public static WebDriver getDriver(){
-        return  ms_driver;
+        ms_driver.set(driver);
     }
 }
