@@ -4,8 +4,10 @@
     <test verbose="2" preserve-order="true" name="/Users/aykutabuhan/IdeaProjects/HepsiBurada_CucumberProject" parallel="classes">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="runner.CartPageRunner"/>
             <class name="runner.MainPageRunner"/>
+            <class name="runner.ProductListPageRunner"/>
+            <class name="runner.ProductDetailPageRunner"/>
+            <class name="runner.CartPageRunner"/>
         </classes>
     </test>
 </suite>
