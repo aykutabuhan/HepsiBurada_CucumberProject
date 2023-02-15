@@ -5,4 +5,4 @@ Feature: MainPage Steps
 
   Scenario: Search Product
     And click to accept cookies
-    And search product and click
+    And search product and click "iphone"
