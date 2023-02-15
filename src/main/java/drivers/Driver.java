@@ -8,10 +8,11 @@ import org.openqa.selenium.safari.SafariDriver;
 public class Driver {
     private static final ThreadLocal<WebDriver> ms_driver = new ThreadLocal<>();
 
+
     public static WebDriver getDriver(){
         return  ms_driver.get();
     }
-    public static void setDriver(WebDriver driver){
+    public static void setDriver(final WebDriver driver ) {
         ms_driver.set(driver);
     }
 }

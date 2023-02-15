@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import drivers.Driver;
+import org.testng.annotations.BeforeClass;
 import pages.CartPage;
 import pages.ProductInformationPage;
 import io.cucumber.java.en.And;
@@ -9,8 +10,8 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 public class ProductDetailPageSteps extends Driver {
-    private final ProductInformationPage m_productInformationPage = new ProductInformationPage(getDriver());
-    private final CartPage m_cartPage = new CartPage(getDriver());
+    private static final ProductInformationPage m_productInformationPage = new ProductInformationPage(getDriver());
+    private static final CartPage m_cartPage = new CartPage(getDriver());
     private static final int PRODUCT_COMMENTS_LIKE_INDEX = 0;
 
 

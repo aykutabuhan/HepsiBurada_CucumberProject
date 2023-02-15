@@ -14,7 +14,6 @@ public class ProductListPage extends BasePage{
     public ProductListPage(final WebDriver driver) {
         super(driver);
     }
-
     public void clickFirstProduct(){
         m_WaitPage.until(ExpectedConditions.visibilityOf(productsListLocator));
         clickElement(productsListLocator);

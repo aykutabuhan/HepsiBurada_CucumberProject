@@ -5,7 +5,7 @@ import pages.MainPage;
 import io.cucumber.java.en.And;
 
 public class MainPageSteps extends Driver {
-    private final MainPage m_mainPage = new MainPage(getDriver());
+    private static final MainPage m_mainPage = new MainPage(getDriver());
     private static final String PRODUCT_SEARCH_NAME = "Iphone";
 
     @And("click to accept cookies")
