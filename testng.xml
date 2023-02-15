@@ -3,10 +3,12 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/Users/aykutabuhan/IdeaProjects/HepsiBurada_CucumberProject" parallel="classes">
         <parameter name="browser" value="Chrome"/>
+        <parameter name="host" value="localhost"/>
+        <parameter name="port" value="4444"/>
         <classes>
             <class name="runner.MainPageRunner"/>
             <class name="runner.ProductListPageRunner"/>
-            <class name="runner.ProductDetailPageRunner"/>
+            <class name="runner.CampaignPageRunner"/>
             <class name="runner.CartPageRunner"/>
         </classes>
     </test>
