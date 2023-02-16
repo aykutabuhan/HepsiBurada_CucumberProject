@@ -42,7 +42,7 @@ public class CampaignPageRunner extends AbstractTestNGCucumberTests {
     }
 
     @AfterClass
-    public void quit() throws InterruptedException {
+    public void quit(){
         Driver.getDriver().quit();
     }
 }
